@@ -1,5 +1,5 @@
 import './App.css';
-import { Tictactoe } from './component/asset/tictactoe/Tictactoe';
+import { Tictactoe } from './component/Tictactoe';
 
 function App() {
   return (
