@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;900&display=swap');
+
 .container{
     text-align: center;
 }
@@ -6,60 +8,47 @@
     color: #2E4374;
     text-shadow: 3px 2px 5px rgba(68, 13, 82, 0.5);
     font-size: 70px;
+    padding-top: 60px;
 }
 
 .title span {
     color:#9400FF;
 }
 
-.reset {
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: 0;
-    background-color: rgb(255, 56, 86);
-    letter-spacing: 1px;
-    font-size: 20px;
-    transition: all .3s ease;
-    box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
-    color: hsl(0, 0%, 100%);
-    font-weight: 900;
-}
-
-.reset:hover {
-    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
-}
-
-.reset:active {
-    background-color: rgb(255, 56, 86);
-    /*50, 168, 80*/
-    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
-    /* transform: translateY(5px);
-    transition: 200ms; */
-}
-
-.boards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin:0;
-    padding-bottom: 50px;
-    gap: 4px;
-
-}
-
-.row1, .row2, .row3{
+.board {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.row1, .row2, .row3 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 150px;
     width:150px;
     border-radius: 12px;
     box-shadow: rgba(9, 3, 92, 0.45) 0px 2px 8px;
-    gap: 5px;
     border: none;
+
+    font-size: 70px;
+}
+.reset {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 50px;
+    background-color: rgb(255, 56, 86);
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: 700;
 }
