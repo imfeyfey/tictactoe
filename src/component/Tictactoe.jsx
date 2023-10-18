@@ -34,6 +34,7 @@ const Tictactoe = () => {
     const resetBoard = () => {
       setGameOver(false);
       setboxes(Array(9).fill(null));
+      setXIsNext(true);
     }
 
   return (
