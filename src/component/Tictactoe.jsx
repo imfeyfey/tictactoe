@@ -14,6 +14,7 @@ const Tictactoe = () => {
     const [xIsNext, setXIsNext] = useState(true);
     const [boxes, setboxes] = useState(Array(9).fill(null));
     const [gameOver, setGameOver] = useState(false);
+    const [winner, setWinner] = useState(null);
     
     
     function handleClick(i) {
@@ -25,21 +26,32 @@ const Tictactoe = () => {
             nextboxes[i] = "X";
           } else {
             nextboxes[i] = "O";
-          }
+          } 
           setboxes(nextboxes);
           setXIsNext(!xIsNext);
-      };
 
+          const winner = calculateWinner(nextboxes);
+          if (winner) {
+              setWinner(winner);
+          } else if (nextboxes.every(box => box !== null)) {
+              setGameOver(true);
+      }};
      
     const resetBoard = () => {
       setGameOver(false);
       setboxes(Array(9).fill(null));
       setXIsNext(true);
+      setWinner(null);
     }
 
+  
   return (
     <div className='container'>
-        <div className="title" >Tic Tac Toe in <span>React</span></div>
+        <div className="title" >{winner ? (
+      winner === 'X' ? `Congrats - X wins!` : `Congrats - O wins!`
+  ) : (
+      gameOver ? `Game Over - It's a Tie!` : `Tic Tac Toe in React`
+  )}</div>
         <div className="board" onClick={gameOver ? resetBoard : calculateWinner}>
             <div className="row1">
                 <Box value={boxes[0]}  onBoxClick={() => handleClick(0)}/>

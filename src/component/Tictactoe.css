@@ -11,10 +11,6 @@
     padding-top: 60px;
 }
 
-.title span {
-    color:#9400FF;
-}
-
 .board {
     display: flex;
     flex-direction: column;
